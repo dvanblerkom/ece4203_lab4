@@ -1,0 +1,71 @@
+# Technology Setup
+# Technology used is Sky130
+vlsi.core.technology: hammer.technology.sky130
+technology.sky130.sky130A: /data02/ECE4203/share/pdk/sky130A
+#technology.sky130:
+#  sky130A: "/home/ff/eecs151/fa23/pdk_mod/sky130/pdk/sky130A"  
+#  sram22_sky130_macros: "/home/ff/eecs151/fa23/sky130_srams/sram22_sky130_macros"  
+
+vlsi.core.max_threads: 4
+
+# General Hammer Inputs
+
+vlsi.inputs.supplies.VDD: "1.8 V"
+
+# Hammer will auto-generate a CPF for simple power designs; see hammer/src/hammer-vlsi/defaults.yml for more info
+vlsi.inputs.power_spec_mode: "auto"
+vlsi.inputs.power_spec_type: "cpf"
+
+# Specify the setup and hold corners for Sky130
+vlsi.inputs.mmmc_corners: [
+  {name: "ss_100C_1v60", type: "setup", voltage: "1.60 V", temp: "100 C"},
+  {name: "ff_n40C_1v95", type: "hold", voltage: "1.95 V", temp: "-40 C"},
+  {name: "tt_025C_1v80", type: "extra", voltage: "1.80 V", temp: "25 C"}
+]
+
+# SRAM Compiler compiler options
+#vlsi.core.sram_generator_tool: "hammer.technology.sky130.sram_compiler"
+# Specify this since we are not using macrocompiler
+#vlsi.inputs.sram_parameters: "/home/ff/eecs151/fa23/hammer/hammer/technology/sky130/sram-cache.json"  
+#vlsi.inputs.sram_parameters_meta: ["transclude", "json2list"]
+
+# Tool options. Replace with your tool plugin of choice.
+# Genus options
+vlsi.core.synthesis_tool: "hammer.synthesis.yosys"
+#synthesis.genus.version: "191"
+synthesis.yosys.libpat: "sky130_fd_sc_hd__"
+
+# Innovus options
+vlsi.core.par_tool: "hammer.par.openroad"
+par.innovus.version: "191" # TODO
+par.innovus.design_flow_effort: "standard"
+par.inputs.gds_merge: true
+
+# Calibre options
+vlsi.core.drc_tool: "hammer.drc.klayout"
+vlsi.core.lvs_tool: "hammer.lvs.netgen"
+#drc.calibre.calibre_drc_bin: "/share/instsww/mgc/CALIBRE/bin/calibre"
+#drc.calibre.calibredrv_bin: "/share/instsww/mgc/CALIBRE/bin/calibredrv"
+#drc.calibre.MGC_HOME: "/shared/instsww/mgc"
+#lvs.calibre.calibre_lvs_bin: "/share/instsww/mgc/CALIBRE/bin/calibre"
+#lvs.calibre.calibredrv_bin: "/share/instsww/mgc/CALIBRE/bin/calibredrv"
+#lvs.calibre.v2lvs_bin: "/share/instsww/mgc/CALIBRE/bin/v2lvs"
+#lvs.calibre.MGC_HOME: "/shared/instsww/mgc"
+
+# Tool options
+par.openroad.create_archive_mode: none
+# speed up tutorial runs & declutter log output
+par.openroad.timing_driven: false
+par.openroad.write_reports: false
+
+
+# CVC options
+vlsi.core.sim_tool: "hammer.sim.cvc"
+sim.cvc.version: "P-2019.06"  # TODO
+
+# Voltus options
+vlsi.core.power_tool: "hammer.power.voltus"
+power.voltus.version: "181"  # TODO
+
+# Generate Make include to aid in flow 
+vlsi.core.build_system: make

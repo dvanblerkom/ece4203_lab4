@@ -1,0 +1,8 @@
+mentor.mentor_home: "/home/dvanblerkom/bin"
+mentor.MGLS_LICENSE_FILE: "1717@localhost"
+cadence.cadence_home: "/home/dvanblerkom/bin"
+cadence.CDS_LIC_FILE: "5280@localhost"
+synopsys.synopsys_home: "/home/dvanblerkom/bin"
+synopsys.SNPSLMD_LICENSE_FILE: "27005@localhost"
+synopsys.MGLS_LICENSE_FILE: "1717@localhost"
+cvc.cvc_home: "/data02/ECE4203"

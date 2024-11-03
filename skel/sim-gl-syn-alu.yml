@@ -1,0 +1,25 @@
+# Post-Synthesis Gate-Level Simulation Variables
+sim.inputs:
+  input_files:
+    - "src/alu_testbench.v"
+  input_files_meta: append
+  level: "syn"
+  timing_annotated: true
+  timescale: "1ns/10ps"
+  options:
+#    - "-notice"
+#    - "-line"
+#    - "+lint=all"
+#    - "+v2k"
+#    - "-debug"
+#    - "+neg_tchk"
+    - "-sverilog"
+  top_module: "alu"
+  tb_name: "alu_testbench"
+  tb_dut: "alu"
+  cvcvlib: "sky130_fd_sc_hd.v"
+  cvclib: "primitives.v"
+  defines: 
+    - "CLOCK_PERIOD=20.00000"
+    - "FUNCTIONAL_IO"
+    - "UNIT_DELAY=#1"
