@@ -1,12 +1,12 @@
 `timescale 1 ns /  100 ps
 
-module alu_testbench;
+module alu_testbench_syn;
    parameter WIDTH = 32;
    reg  [WIDTH-1:0] A, B;
    reg [2:0] 	    alu_op;
    wire [WIDTH-1:0] result;
    
-   alu #(WIDTH) alu (
+   alu alu (
 		     .clk(clk),	      
 		     .A(A),
 		     .B(B),

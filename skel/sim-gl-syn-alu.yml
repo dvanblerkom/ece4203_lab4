@@ -1,7 +1,7 @@
 # Post-Synthesis Gate-Level Simulation Variables
 sim.inputs:
   input_files:
-    - "src/alu_testbench.v"
+    - "src/alu_testbench_syn.v"
   input_files_meta: append
   level: "syn"
   timing_annotated: true
@@ -15,7 +15,7 @@ sim.inputs:
 #    - "+neg_tchk"
     - "-sverilog"
   top_module: "alu"
-  tb_name: "alu_testbench"
+  tb_name: "alu_testbench_syn"
   tb_dut: "alu"
   cvcvlib: "sky130_fd_sc_hd.v"
   cvclib: "primitives.v"
