@@ -567,7 +567,7 @@ you understand the provided code:
 Check the waveforms in DVE. 
 ```
 cd build/sim-rundir
-dve -vpd vcdplus.vpd &
+gtkwave --dump=verilog.dump &
 ```
 
 1. Report the clk-q delay of `state[0]` in `GCDctrl0` at 350 ns and submit a screenshot of the waveforms showing how you found this delay.
@@ -582,7 +582,7 @@ dve -vpd vcdplus.vpd &
    - total cell area
    - maximum operating frequency in MHz from the reports (You might need to re-run synthesis multiple times to determine the maximum achievable frequency)
 
-2. From the reports of your 32-bit synthesized divder, determine its:
+2. From the reports of your 32-bit synthesized ALU, determine its:
    - critical path and the slack
    - total cell area
    - maximum operating frequency in MHz from the reports (You might need to re-run synthesis multiple times to determine the maximum achievable frequency)
