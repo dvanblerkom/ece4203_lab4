@@ -316,7 +316,7 @@ information must be transferred.
 
 
 
- Open `src/gcd.v`. This is the top-level of GCD and just i.
+ Open `src/gcd.v`. This is the top-level of GCD.
 Separating files into control and datapath is generally a good idea. Open `src/gcd_datapath.v`.
 This file stores the operands, and contains the logic necessary to implement the algorithm (subtraction and comparison). Open `src/gcd_control.v`. This file contains a state machine that handles
 the ready-valid interface and controls the mux selects in the datapath. Open `src/gcd_testbench.v`.
