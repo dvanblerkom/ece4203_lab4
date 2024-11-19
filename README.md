@@ -556,7 +556,7 @@ you understand the provided code:
    
 2. Which report contains area breakdown by modules in the design?
   
-3. What is the cell used for `A_register/q_reg[7]`? How much leakage power does `A_register/q_reg[7]` contribute? How did you find this?
+3. What is the cell used for `A_register/q[7]`? 
 
 ### Question 3: GCD Synthesis Questions
 1. Looking at the total number of instances of sequential cells synthesized and the number of `reg` definitions in the Verilog files, are they consistent? If not, why?
@@ -564,7 +564,7 @@ you understand the provided code:
 2. Reduce the clock period (in `design.yml`) by the amount of slack in the timing report. Now run the synthesis flow again. Does it still meet timing? Why or why not? Does the critical path stay the same? If not, what changed?
 
 ### Question 4: Delay Questions
-Check the waveforms in DVE. 
+Check the waveforms in GTKWave. 
 ```
 cd build/sim-rundir
 gtkwave --dump=verilog.dump &
