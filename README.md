@@ -561,7 +561,7 @@ you understand the provided code:
 ### Question 3: GCD Synthesis Questions
 1. Looking at the total number of instances of sequential cells synthesized and the number of `reg` definitions in the Verilog files, are they consistent? If not, why?
 
-2. Reduce the clock period (in `design.yml`) by the amount of slack in the timing report. Now run the synthesis flow again. Does it still meet timing? Why or why not? Does the critical path stay the same? If not, what changed?
+2. Reduce the clock period (you will need to edit bot `design.yml` and `sta/gcd_constraints.sdc`) by the amount of slack in the timing report. Now run the synthesis flow again. Does it still meet timing? Why or why not? Does the critical path stay the same? If not, what changed?
 
 ### Question 4: Delay Questions
 Check the waveforms in GTKWave. 
