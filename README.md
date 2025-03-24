@@ -40,7 +40,7 @@ Department of Electrical and Computer Engineering, Cal Poly Pomona
 
 ## Overview
 **Setup:**
-Pull lab4 from the Github Classroom into your home directory:
+Pull lab4 into your home directory:
    ```
    cd 
    git clone https://github.com/dvb-ece-cpp/ece4203_lab4.git
