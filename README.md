@@ -576,6 +576,8 @@ gtkwave --dump=verilog.dump &
 
 3. Is the delay from the waveform the same as from the sdf file? Why or why not?
 
+4. Submit waveforms from the post-synthesis simulation showing the module working.
+
 ### Question 5: Synthesized ALU
 1. From the reports of your 4-bit synthesized ALU, determine its:
    - critical path and the slack
@@ -587,8 +589,9 @@ gtkwave --dump=verilog.dump &
    - total cell area
    - maximum operating frequency in MHz from the reports (You might need to re-run synthesis multiple times to determine the maximum achievable frequency)
 
-3. Submit your ALU code and testbench to the report. Also, `git push` all your work to github repository. Add comments to explain your testbench and why it provides sufficient coverage for your divider module. (You don't have to run post-synthesis simulation for Question 5). That is, run `make sim-rtl SIM_RTL_CONF=sim-rtl-alu.yml` to verify your testbench).
+3. Submit your ALU code and testbench to the report. Add comments to explain your testbench and why it provides sufficient coverage for your module.  Run `make sim-rtl SIM_RTL_CONF=sim-rtl-alu.yml` to verify your testbench.
 
+4. Submit waveforms from the post-synthesis simulations showing your synthesized ALUs working.
 
 ## Acknowledgement
 
